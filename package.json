@@ -1,0 +1,23 @@
+{
+  "name": "easy-pouchdb-server",
+  "version": "1.0.0",
+  "description": "Deploy a PouchDB server easily",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-pouchdb": "^4.2.0",
+    "helmet": "^4.6.0",
+    "pouchdb": "^7.2.2"
+  },
+  "repository": {
+    "url": "https://github.com/acailly/easy-pouchdb-server"
+  },
+  "keywords": [
+    "node",
+    "pouchdb",
+    "express"
+  ]
+}
