@@ -4,12 +4,20 @@
 // init project
 const express = require("express");
 const helmet = require("helmet");
+const cors = require("cors");
 const app = express();
 const PouchDB = require("pouchdb");
 // create pouchdb database in .data
 const TempPouchDB = PouchDB.defaults({ prefix: ".data/" });
 
 app.use(helmet());
+
+const corsOptions = {
+  origin: true,
+  credentials: true,
+};
+app.use(cors(corsOptions));
+
 app.use("/", require("express-pouchdb")(TempPouchDB));
 
 // listen for requests :)
